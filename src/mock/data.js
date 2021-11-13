@@ -2,17 +2,17 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Hoko Le | Deeloper', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
+  description: 'Welcome to my website', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
+  title: 'Hello, my name is ',
+  name: 'Hoko',
+  subtitle: 'I'm the software developer.',
+  cta: Know more',
 };
 
 // ABOUT DATA
@@ -29,7 +29,7 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Spotify Clone',
     info: '',
     info2: '',
     url: '',
@@ -65,25 +65,25 @@ export const contactData = {
 // FOOTER DATA
 export const footerData = {
   networks: [
-    {
+    /*{
       id: nanoid(),
       name: 'twitter',
       url: '',
-    },
+    },*/
     {
       id: nanoid(),
       name: 'codepen',
-      url: '',
+      url: 'https://codepen.io/koke-le',
     },
     {
       id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://linkedin.com/in/hokole',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/hokole',
     },
   ],
 };
