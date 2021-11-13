@@ -1,44 +1,266 @@
-## React-terminal-portfolio  
-Minimal Portfolio template for Developers built with React. Use it to showcase your work, testimonials and other information to clients.
-If you like it give it a :star: 
-## Preview
+# Gatsby Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
 
-![](react-terminal.gif)
+## A clean, beautiful and responsive portfolio template for Developers
 
-## Code
+<h2 align="center">
+  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby Simplefolio" width="600px" />
+  <br>
+</h2>
 
-The code for this project is in the code-react-terminal branch. For deploying your react-app to GitHub pages follow this link - [Deploy-to-github-pages](https://reactgo.com/deploy-react-app-github-pages/)
+## Features
 
-## Installation
+⚡️ Modern UI Design + Reveal Animations\
+⚡️ One Page Layout built with React\
+⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
+⚡️ Fully Responsive\
+⚡️ Configurable color scheme\
+⚡️ Image optimization with Gatsby\
+⚡️ Easy site customization\
+⚡️ Well organized documentation
 
-- Clone/Fork the repo.
-- cd into the cloned repository
-- Run `npm install`.
-- Change the values in `src/components/cat.jsx` to suit your use-case.
-- Run `npm start` to spin the up the local dev server port http://localhost:3000
+To view a demo example, **[click here](https://gatsby-simplefolio.netlify.com/)**\
+To view a live example, **[click here](https://cobidev.com/)**
 
-## GitHub Pages
+---
 
-GitHub makes it easy to create personal websites. Follow this link - [GitHub Pages](https://pages.github.com/) to know how or follow the steps below.
+## Getting Started 🚀
 
-If you already have a GitHub profile (obviously)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-- Create a new repo with the name {username}.github.io
-- Clone/Fork this repo and copy the files to your newly created repo
-- Customize your name, links and everything else for your landing page
-- git push
+### Prerequisites 📋
 
-Voila! Your site should be live at https://{username}.github.io
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [NPM](http://npmjs.com)) installed on your computer.\
+Also you need to have installed [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start/)
 
-Here's is a **dummy Landing Page** - [react portfolio](https://shloksomani.github.io/react-terminal-portfolio/)
+```
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
+gatsby-cli@2.8.22 or higher
+```
 
-## Todo
-- Have the arrow functionality so that user can cycle through prev commands 
-- Tab auto complete 
-- Giving unique id's to list elements and removing the hard coded one 
-- Change the theme on user commands  
-- A card like structure for diffrent projects and education 
+Also, you can use [Yarn](https://yarnpkg.com/) instead of NPM ☝️
 
-## Licence
+```
+yarn@v1.21.1 or higher
+```
 
-MIT License © Shlok Somani
+---
+
+## How To Use 🔧
+
+From your command line, first clone Simplefolio:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/cobidev/gatsby-simplefolio
+
+# Go into the repository
+$ cd gatsby-simplefolio
+
+# Remove current origin repository
+$ git remote remove origin
+```
+
+Then you can install the dependencies either using NPM or Yarn:
+
+Using NPM:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Start development server
+$ npm run develop
+```
+
+Using Yarn:
+
+```bash
+# Install dependencies
+$ yarn
+
+# Start development server
+$ yarn develop
+```
+
+**NOTE**:
+If your run into issues installing the dependencies with NPM, use this command:
+
+```bash
+# Install dependencies with all permissions
+$ sudo npm install --unsafe-perm=true --allow-root
+```
+
+Once your server has started, go to this url `http://localhost:8000/` and you will see the website running on a Development Server:
+
+<h2 align="center">
+  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.png" alt="Gatsby Simplefolio" width="100%">
+</h2>
+
+---
+
+## Instructions:
+
+### Step 1 - STRUCTURE
+
+Go to `/src/mock/data.js` and fill your information, they are 5 objects:
+
+### Hero Section
+
+```javascript
+export const heroData = {
+  title: '', // Hello, my name is
+  name: '', // John
+  subtitle: '', // I'm the Unknown Developer.
+  cta: '', // Know more
+};
+```
+
+### About Section
+
+**_Important Note_**: All the images must live inside the `src/images/` folder in order for Gatsby to show the images correctly.
+
+```javascript
+export const aboutData = {
+  img: 'profile.jpg', // put your profile image (recommended aspect radio: square)
+  paragraphOne: '',
+  paragraphTwo: '',
+  paragraphThree: '',
+  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+};
+```
+
+### Projects Section
+
+**_Important Note_**: All the images must live inside the `src/images/` folder in order for Gatsby to show the images correctly.
+
+Put as many projects object you want inside the `array`.
+
+```javascript
+export const projectsData = [
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  },
+  ...
+];
+```
+
+### Contact Section
+
+```javascript
+export const contactData = {
+  cta: '', // call to action text for the contact section
+  btn: '', // text inside the button
+  email: '',
+};
+```
+
+### Footer Section
+
+You can remove or add as many you social-media icons you want.\
+Just put an object with the corresponding values inside the networks `array` or remove it from there.
+
+```javascript
+export const footerData = {
+  networks: [
+    {
+      id: nanoid(),
+      name: 'twitter',
+      url: '', // your twitter url
+    },
+    {
+      id: nanoid(),
+      name: 'codepen',
+      url: '', // your codepen url
+    },
+    {
+      id: nanoid(),
+      name: 'linkedin',
+      url: '', // your linkedin url
+    },
+    {
+      id: nanoid(),
+      name: 'github',
+      url: '', // your github url
+    },
+  ],
+};
+```
+
+### Required - Disable GitHub buttons
+
+Set `isEnabled` to `false` once you finish setup your portfolio.\
+By setting to `false` it will hide the GitHub stars/fork buttons
+
+```javascript
+export const githubButtons = {
+  isEnabled: true, // true is the default value
+};
+```
+
+### Step 2 - STYLES
+
+Change the color theme of the website ( choose 2 colors to create a gradient ):
+
+Go to `src/styles/abstracts/_variables.scss` and only change the values on this classes `$main-color` and `$secondary-color` to your prefered HEX color
+
+```scss
+// Default values
+$main-color: #02aab0;
+$secondary-color: #00cdac;
+```
+
+**_Note_**: I highly recommend to checkout gradients variations on [UI Gradient](https://uigradients.com/#BrightVault)
+
+---
+
+## Deployment 📦
+
+Once you have done with your setup. You need to put your website online!
+
+I highly recommend to use [Netlify](https://netlify.com) to achieve this on the EASIEST WAY
+
+## Others versions 👥
+
+[Simplefolio](https://github.com/cobidev/simplefolio) by [Jacobo Martinez](https://github.com/cobidev)\
+[Ember.js Simplefolio](https://github.com/sernadesigns/simplefolio-ember) by [Michael Serna](https://github.com/sernadesigns)
+
+## Technologies used 🛠️
+
+- [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
+- [GraphQL](https://graphql.org/) - Query language for APIs
+- [React](https://es.reactjs.org/) - Front-End JavaScript library
+- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - Front-End UI library
+- [Sass](https://sass-lang.com/documentation) - CSS extension language
+
+## Authors
+
+- **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
+
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2365af6f-820a-4fb8-83e6-69a66f686dfe/deploy-status)](https://app.netlify.com/sites/gatsby-simplefolio/deploys)
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments 🎁
+
+I was motivated to create this project because I wanted to contribute on something useful for the dev community, thanks to [ZTM Community](https://github.com/zero-to-mastery) and [Andrei](https://github.com/aneagoie)
